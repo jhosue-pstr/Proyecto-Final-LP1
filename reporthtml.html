@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte Mensual - Cisne Chevrolet</title>
+    <!-- Enlaces a Bootstrap y otras bibliotecas -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Enlace a tu archivo CSS personalizado -->
+    <link rel="stylesheet" href="ColaboradoresS.css">
+    <!-- Enlace a tu archivo JavaScript personalizado -->
+    <script src="Colaboradores.js"></script>
+</head>
+
+<body>
+    <!-- Encabezado y barra de navegación -->
+    <header class="py-3 mb-3 border-bottom bg-dark">
+        <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
+            <div class="dropdown">
+                <a href="#"
+                    class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-dark text-decoration-none dropdown-toggle"
+                    id="dropdownNavLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="/imagenes/logo.jpeg" alt="Logo" width="150" height="50">
+                </a>
+                <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownNavLink">
+                    <li><a class="dropdown-item" href="vistajefedeservicios.html">Home</a></li>
+                    <li><a class="dropdown-item" href="clientehtml.html">Info Clientes</a></li>
+                    <li><a class="dropdown-item" href="mantenimientohtml.html">Fechas de Mantenimiento</a></li>
+                    <li class="active"><a class="dropdown-item" href="#">Reporte Mensual</a></li>
+                    <li><a class="dropdown-item" href="stockhtml.html">Inventario De Repuestos</a></li>
+                </ul>
+            </div>
+            <div class="d-flex align-items-center">
+                <form class="w-100 me-3">
+                    <input type="search" class="form-control" placeholder="Buscar..." aria-label="Search">
+                </form>
+                <div class="flex-shrink-0 dropdown">
+                    <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="/imagenes/wilder.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                    </a>
+                    <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                        <li><a class="dropdown-item" href="#">Nuevo proyecto...</a></li>
+                        <li><a class="dropdown-item" href="#">Configuración</a></li>
+                        <li><a class="dropdown-item" href="#">Perfil</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <section id="reporte-mensual" class="section">
+        <div class="container">
+            <div class="row">
+                <!-- Información de mantenimientos -->
+                <div class="col-md-6">
+                    <h2>Mantenimientos Realizados</h2>
+                    <ul id="lista-mantenimientos" class="list-group">
+                        <li class="list-group-item">Mantenimiento 1 - Fecha: 01/07/2024</li>
+                        <li class="list-group-item">Mantenimiento 2 - Fecha: 15/07/2024</li>
+                        <!-- Agrega dinámicamente los mantenimientos realizados -->
+                    </ul>
+                </div>
+                <!-- Información de repuestos utilizados -->
+                <div class="col-md-6">
+                    <h2>Repuestos Utilizados</h2>
+                    <ul id="lista-repuestos" class="list-group">
+                        <li class="list-group-item">Repuesto 1 - Cantidad: 5 unidades</li>
+                        <li class="list-group-item">Repuesto 2 - Cantidad: 3 unidades</li>
+                        <!-- Agrega dinámicamente los repuestos utilizados -->
+                    </ul>
+                </div>
+                <div class="col-md-12">
+                    <h2>Clientes</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>DNI</th>
+                                <th>Nombre</th>
+                                <th>Dirección</th>
+                                <th>Auto</th>
+                                <th>Tipo de Mantenimiento</th>
+                                <th>Descuento</th>
+                                <th>Monto Final</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>12345678</td>
+                                <td>José Pérez</td>
+                                <td>Calle Principal 123</td>
+                                <td>Chevrolet Spark</td>
+                                <td>Mantenimiento Programado</td>
+                                <td>10%</td>
+                                <td>$150.00</td>
+                            </tr>
+                            <tr>
+                                <td>87654321</td>
+                                <td>María Gómez</td>
+                                <td>Avenida Central 456</td>
+                                <td>Chevrolet Cruze</td>
+                                <td>Cambio de Aceite y Filtros</td>
+                                <td>No</td>
+                                <td>$200.00</td>
+                            </tr>
+                            <!-- Agrega más filas según necesites -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Gráfico de reporte -->
+            <div class="row mt-5">
+                <div class="col-md-12">
+                    <h2>Gráfico de Mantenimientos</h2>
+                    <canvas id="graficoMantenimientos" width="400" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="py-3 mt-5 bg-light">
+        <div class="container text-center">
+            <p>&copy; 2024 Cisne Chevrolet. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script para funcionalidades interactivas -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Datos de ejemplo para el gráfico
+            var datosMantenimientos = [5, 3]; // Ejemplo de datos de mantenimientos realizados
+
+            // Configuración del gráfico
+            var ctx = document.getElementById('graficoMantenimientos').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Mantenimiento 1', 'Mantenimiento 2'],
+                    datasets: [{
+                        label: 'Cantidad de Mantenimientos',
+                        data: datosMantenimientos,
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // Función para cargar dinámicamente los mantenimientos realizados
+            var listaMantenimientos = document.getElementById('lista-mantenimientos');
+            var mantenimientos = ['Mantenimiento 1 - 01/07/2024', 'Mantenimiento 2 - 15/07/2024'];
+            mantenimientos.forEach(function (mantenimiento) {
+                var li = document.createElement('li');
+                li.className = 'list-group-item';
+                li.textContent = mantenimiento;
+                listaMantenimientos.appendChild(li);
+            });
+
+            // Función para cargar dinámicamente los repuestos utilizados
+            var listaRepuestos = document.getElementById('lista-repuestos');
+            var repuestos = ['Repuesto 1 - Cantidad: 5 unidades', 'Repuesto 2 - Cantidad: 3 unidades'];
+            repuestos.forEach(function (repuesto) {
+                var li = document.createElement('li');
+                li.className = 'list-group-item';
+                li.textContent = repuesto;
+                listaRepuestos.appendChild(li);
+            });
+        });
+    </script>
+</body>
+
+</html>

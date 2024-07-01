@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título de tu Página</title>
+    <!-- Enlaces a Bootstrap y otras bibliotecas -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Enlace a tu archivo CSS personalizado -->
+    <link rel="stylesheet" href="ColaboradoresS.css">
+    <!-- Enlace a tu archivo JavaScript personalizado -->
+    <script src="Colaboradores.js"></script>
+</head>
+
+<body>
+    <!-- Encabezado y barra de navegación -->
+    <header class="py-3 mb-3 border-bottom bg-dark">
+        <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
+            <div class="dropdown">
+                <a href="#"
+                    class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-dark text-decoration-none dropdown-toggle"
+                    id="dropdownNavLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="/imagenes/logo.jpeg" alt="Logo" width="150" height="50">
+                </a>
+                <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownNavLink">
+                    <li><a class="dropdown-item active" href="vistajefedeservicios.html">Home</a></li>
+                    <li><a class="dropdown-item" href="clientehtml.html">Info Clientes</a></li>
+                    <li><a class="dropdown-item" href="mantenimientohtml.html">Fechas de Mantenimiento</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="reporthtml.html">Reporte Mensual</a></li>
+                    <li><a class="dropdown-item" href="stockhtml.html">Inventario De Repuestos</a></li>
+                </ul>
+            </div>
+            <div class="d-flex align-items-center">
+                <form class="w-100 me-3">
+                    <input type="search" class="form-control" placeholder="Buscar..." aria-label="Search">
+                </form>
+                <div class="flex-shrink-0 dropdown">
+                    <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="/imagenes/wilder.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                    </a>
+                    <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                        <li><a class="dropdown-item" href="#">Nuevo proyecto...</a></li>
+                        <li><a class="dropdown-item" href="#">Configuración</a></li>
+                        <li><a class="dropdown-item" href="#">Perfil</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección: Ranking de Asesores -->
+
+
+    <body>
+
+
+
+
+
+
+
+        <div id="content-home" class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 border border-danger">
+                        <h2>Bienvenido a Cisne Chevrolet</h2>
+                        <p>Somos líderes en la venta y servicio de vehículos Chevrolet en tu región. En Cisne Chevrolet,
+                            nos
+                            dedicamos a proporcionarte la mejor experiencia en la compra de tu próximo vehículo.</p>
+
+                        <p>Nuestros valores fundamentales incluyen compromiso con la calidad, atención al cliente
+                            excepcional y la
+                            satisfacción total de nuestros clientes.</p>
+
+                    </div>
+
+
+
+                    <div class="col-md-6">
+                        <div class="border border-danger p-3 mb-4">
+                            <h3>Noticias Internas</h3>
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cambio en Políticas de Seguridad</h5>
+                                    <p class="card-text">Hemos actualizado nuestras políticas de seguridad para
+                                        garantizar
+                                        un entorno de trabajo seguro. Se implementarán nuevas medidas a partir del
+                                        próximo
+                                        mes.</p>
+                                    <a href="#" class="btn btn-primary">Leer más</a>
+                                </div>
+                            </div>
+
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Próximos Eventos: Seminario de Ventas</h5>
+                                    <p class="card-text">Nos complace anunciar el próximo seminario de ventas, donde se
+                                        abordarán estrategias innovadoras para mejorar nuestro servicio al cliente.</p>
+                                    <a href="#" class="btn btn-primary">Leer más</a>
+                                </div>
+                            </div>
+
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Logros Recientes: Mejor Mes en Ventas</h5>
+                                    <p class="card-text">Celebramos nuestro mejor mes en ventas gracias al arduo trabajo
+                                        de
+                                        todo el equipo. ¡Felicidades a todos por este logro!</p>
+                                    <a href="#" class="btn btn-primary">Leer más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="col-md-6">
+                        <div class="border border-danger p-3 mb-4">
+                            <h3>Calendario de Eventos</h3>
+                            <p>Un calendario interactivo que muestra eventos internos importantes, como reuniones de
+                                equipo,
+                                sesiones de formación, fechas límite importantes, etc.</p>
+
+                            <!-- Aquí puedes incluir tu calendario interactivo -->
+                            <div id="calendar" class="mt-3">
+                                <!-- Contenido del calendario interactivo -->
+                                <!-- Puedes utilizar bibliotecas como FullCalendar.io para implementar el calendario -->
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="col-md-6">
+                        <div class="border border-danger p-3 mb-4">
+                            <h3>Reconocimiento de Empleados</h3>
+                            <p>Una sección para destacar a empleados destacados del mes o trimestre, con breves perfiles
+                                y
+                                logros destacados.</p>
+
+                            <!-- Aquí puedes agregar los perfiles de empleados destacados -->
+                            <div class="employee-profile">
+                                <div class="mb-3">
+                                    <h5>Juan Pérez - Empleado del Mes</h5>
+                                    <p>Juan Pérez ha demostrado un compromiso excepcional con el servicio al cliente,
+                                        recibiendo elogios constantes de nuestros clientes por su atención y dedicación.
+                                    </p>
+                                    <small class="text-muted">Fecha: 30 de junio de 2024</small>
+                                </div>
+                                <div>
+                                    <h5>Marta Gómez - Innovación Destacada</h5>
+                                    <p>Marta Gómez ha liderado un proyecto innovador que ha mejorado significativamente
+                                        nuestros procesos internos, mostrando un compromiso excepcional con la
+                                        excelencia
+                                        operativa.</p>
+                                    <small class="text-muted">Fecha: 28 de junio de 2024</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="col-md-6">
+                        <div class="border border-danger p-3 mb-4">
+                            <h3>Feedback de Clientes</h3>
+                            <p>Comentarios positivos recientes de clientes satisfechos, mostrando el impacto positivo
+                                del
+                                trabajo del equipo.</p>
+
+                            <!-- Aquí puedes agregar los comentarios de los clientes -->
+                            <div class="customer-feedback">
+                                <div class="mb-3">
+                                    <h5>Juanita Sánchez</h5>
+                                    <p>"Estoy muy contenta con el servicio recibido en Cisne Chevrolet. El equipo fue
+                                        muy
+                                        amable y profesional, ¡gracias!"</p>
+                                    <small class="text-muted">Fecha: 2 de julio de 2024</small>
+                                </div>
+                                <div>
+                                    <h5>Ricardo Torres</h5>
+                                    <p>"Excelente atención y asesoramiento durante la compra de mi vehículo. Recomiendo
+                                        ampliamente sus servicios."</p>
+                                    <small class="text-muted">Fecha: 30 de junio de 2024</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="col-md-6">
+                        <div class="border border-danger p-3 mb-4">
+                            <h3>Desempeño de Ventas</h3>
+                            <p>Gráficos o tablas que resuman el desempeño de ventas del mes o trimestre, destacando los
+                                objetivos alcanzados y áreas de mejora.</p>
+
+                            <!-- Contenedor para el gráfico o tabla -->
+                            <div id="salesPerformance" class="sales-performance"></div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="col-md-6">
+                        <div class="border border-danger p-3 mb-4">
+                            <h3>Consejos de Productividad</h3>
+                            <p>Tips y consejos para mejorar la productividad y eficiencia en el trabajo diario.</p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+    </body>

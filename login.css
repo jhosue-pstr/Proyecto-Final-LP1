@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #c9c4c4, #ffffff); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.login-card {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center; /* Alinear el contenido al centro */
+    width: 500px; /* Ancho deseado */
+}
+
+.logo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 200px; /* Ajusta el ancho de la imagen según sea necesario */
+    height: 200px; /* Ajusta la altura automáticamente para mantener la proporción */
+    display: block; /* Para asegurar que la imagen se comporta como bloque */
+    margin: 0 auto; /* Centrar la imagen horizontalmente */
+}
+
+
+.custom-img {
+    width: 900px; /* Ancho personalizado para logologin2.png */
+    height: 550px; /* Altura ajustada automáticamente para mantener la proporción */
+    margin-right: 200px; /* Ejemplo de ajuste de margen izquierdo */
+    margin-top: 50px; /* Ejemplo de ajuste de margen superior */
+}
+
+.form-label1 {
+    margin-right: 260px; /* Alinear el texto a la izquierda */
+}
+.form-label2 {
+    margin-right: 340px; /* Alinear el texto a la izquierda */
+}

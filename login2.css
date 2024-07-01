@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #bcbe42, #b49f23); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.logologin {
+    width: 920px;  /* Ancho de la imagen */
+    height: 900;  /* Altura automática para mantener la proporción */
+    max-width: 100%;  /* Asegura que la imagen no exceda el ancho del contenedor */
+    margin-top: -1px;
+    margin-right: 1000px;
+}
+
+
+.form-container {
+    background: linear-gradient(to bottom, #ffffff, #fdfdfd); 
+    padding: 20px;
+    border-radius: 1px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 1000px;
+    height: 919px;
+    position: absolute;  /* Permite posicionar la ventana de manera absoluta */
+    top: 50%;            /* Ajusta la posición vertical */
+    left: 1420px;           /* Ajusta la posición horizontal */
+    transform: translate(-50%, -50%); /* Centra la ventana */
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #b49f23;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #b49f23;
+    font-size: 20px;  /* Cambia el tamaño del texto de las etiquetas */
+
+    
+}
+
+input {
+    padding: 13px;
+    margin-bottom: 20px;
+    border: 1px solid #b49f23;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+input::placeholder {
+    color: #ccc;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #b49f23;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c9b22f;
+}
