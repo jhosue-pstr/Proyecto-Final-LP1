@@ -37,7 +37,6 @@
                     <p>¿No tienes una cuenta? <a href="registro.html" style="color: rgb(180, 159, 35);">Crear
                             cuenta</a></p>
                 </div>
-
                 <?php
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $servername = "localhost";
@@ -45,9 +44,7 @@
                     $password = "";
                     $database = "db_cisne";
 
-
                     $conn = new mysqli($servername, $username, $password, $database);
-
 
                     if ($conn->connect_error) {
                         die("La conexión falló: " . $conn->connect_error);
@@ -56,47 +53,47 @@
                     $correo = $_POST['correo'];
                     $password = $_POST['password'];
 
-                    if (strpos($correo, '@chevrolet.com') !== false) {
-                        // Consulta para clientes
-                        $sql_cliente = "SELECT * FROM cliente WHERE cl_correo = '$correo' AND cl_contraseña = '$password'";
-                        $result_cliente = $conn->query($sql_cliente);
+                    $sql_cliente = "SELECT * FROM cliente WHERE cl_correo = '$correo' AND cl_contraseña = '$password'";
+                    $result_cliente = $conn->query($sql_cliente);
 
-                        if ($result_cliente->num_rows > 0) {
-                            echo "<div class='alert alert-success mt-3' role='alert'>Inicio de sesión exitoso como cliente</div>";
+                    if ($result_cliente->num_rows > 0) {
+                        $cliente = $result_cliente->fetch_assoc();
+                        $cliente_id = $cliente['cl_id'];
+                        echo "<div class='alert alert-success mt-3' role='alert'>Inicio de sesión exitoso como cliente</div>";
+                        session_start();
+                        $_SESSION['loggedin'] = true;
+                        $_SESSION['usuario'] = $correo;
+                        header("Location: Cliente.php?id=$cliente_id");
+                        exit;
+                    } else {
+                        $sql_empleado = "SELECT * FROM empleado WHERE em_correo = '$correo' AND em_contraseña = '$password'";
+                        $result_empleado = $conn->query($sql_empleado);
+
+                        if ($result_empleado->num_rows > 0) {
+                            $empleado = $result_empleado->fetch_assoc();
+                            $cargo = $empleado['em_cargo'];
+
+                            echo "<div class='alert alert-success mt-3' role='alert'>Inicio de sesión exitoso como empleado</div>";
                             session_start();
                             $_SESSION['loggedin'] = true;
                             $_SESSION['usuario'] = $correo;
-                            header("Location: index.html");
+
+                            if ($cargo == 'gerente') {
+                                header("Location: Colaboradores.php?id={$empleado['em_id']}");
+                            } else if ($cargo == 'jefe de servicios') {
+                                header("Location: jefeservicios.php?id=$empleado[em_id]");
+                            } else if ($cargo == 'jefe de venta') {
+                                header("Location: jefeventa.php?id=$empleado[em_id]");
+                            } else if ($cargo == 'gestora') {
+                                header("Location: gestora.php?id=$empleado[em_id]");
+
+                            } else if ($cargo == 'asesor de ventas') {
+                                header("Location: asesorVentas.php?id=$empleado[em_id]");
+                            }
                             exit;
                         } else {
-                            // Consulta para empleados
-                            $sql_empleado = "SELECT * FROM empleado WHERE em_correo = '$correo' AND em_contraseña = '$password'";
-                            $result_empleado = $conn->query($sql_empleado);
-
-                            if ($result_empleado->num_rows > 0) {
-                                $empleado = $result_empleado->fetch_assoc();
-                                $cargo = $empleado['em_cargo'];
-
-                                echo "<div class='alert alert-success mt-3' role='alert'>Inicio de sesión exitoso como empleado</div>";
-                                session_start();
-                                $_SESSION['loggedin'] = true;
-                                $_SESSION['usuario'] = $correo;
-
-                                if ($cargo == 'gerente') {
-                                    header("Location: Colaboradores.html");
-                                } else if ($cargo == 'jefe de servicios') {
-                                    header("Location: vistajefedeservicios.html");
-                                } else {
-                                    header("Location: empleado_dashboard.php");
-                                }
-                                exit;
-                            } else {
-                                echo "<div class='alert alert-danger mt-3' role='alert'>Correo electrónico o contraseña incorrectos</div>";
-                            }
+                            echo "<div class='alert alert-danger mt-3' role='alert'>Correo electrónico o contraseña incorrectos</div>";
                         }
-                    } else {
-                        header("Location: index.html");
-                        exit;
                     }
 
                     $conn->close();

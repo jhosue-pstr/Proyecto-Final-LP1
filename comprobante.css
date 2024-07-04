@@ -1,0 +1,643 @@
+header {
+    background: white;
+    width: 1960px;
+    height: 100;
+    box-shadow: 0px 0px 10px 0px #333;
+    position: fixed;
+    left: -40px; 
+    top: -20px; 
+    z-index: 1000; 
+
+}
+
+
+
+
+/* ENCABEZADO */
+.logo{
+    display: inline-block;  
+    transform: scale(0.3,0.3);
+
+    position: relative; 
+    left: -150px;
+    top: -30px; 
+}
+
+/* VEHÍCULOS *//* VEHÍCULOS *//* VEHÍCULOS */ /* VEHÍCULOS *//* VEHÍCULOS *//* VEHÍCULOS *//* VEHÍCULOS *//* VEHÍCULOS */
+.VEHÍCULOS {
+    padding: 0;
+    margin: 0;
+    list-style-type: none; 
+    position: absolute;
+    top: 40px;
+    left: 280px; 
+}
+
+/* Estilos para los elementos principales del menú */
+.VEHÍCULOS > li {
+    position: relative; 
+}
+
+.VEHÍCULOS > li > a {
+    background-color: transparent; 
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    color: gray; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 18px; }
+
+.VEHÍCULOS > li:hover > a {
+    background-color: rgb(238, 238, 238); 
+}
+
+/* Estilos para los submenús */
+.VEHÍCULOS li ul {
+    display: none; 
+    position: absolute;
+    top: 105%;
+    left: 0;
+    width: 200%; 
+    background-color: white; 
+    border: 1px solid #ccc; 
+    padding: 10px 0; 
+    z-index: 1; 
+    list-style-type: none; 
+    text-align: left; 
+    padding-left: 10px; 
+    color: gray; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 15px; 
+}
+
+.VEHÍCULOS li ul li {
+    margin-bottom: 8px; 
+}
+
+.VEHÍCULOS li ul li a {
+    display: block;
+    padding: 8px 15px; 
+    text-decoration: none; 
+    color: rgb(32, 32, 34);
+}
+
+.VEHÍCULOS li ul li a:hover {
+    text-decoration: underline; 
+    background-color: rgb(238, 238, 238); 
+}
+
+.VEHÍCULOS li:hover > ul {
+    display: block; 
+}
+
+/* POSTVENTA *//* POSTVENTA *//* POSTVENTA *//* POSTVENTA *//* POSTVENTA *//* POSTVENTA *//* POSTVENTA *//* POSTVENTA */
+
+.POSVENTA {
+    padding: 0;
+    margin: 0;
+    list-style-type: none; 
+    position: absolute; 
+    top: 40px; 
+    left: 410px; 
+}
+
+.POSVENTA > li {
+    position: relative; 
+}
+
+.POSVENTA > li > a {
+    background-color: transparent; 
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    color: gray; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 18px; 
+}
+
+.POSVENTA > li:hover > a {
+    background-color: rgb(238, 238, 238); 
+}
+
+.POSVENTA li ul {
+    display: none; 
+    position: absolute;
+    top: 105%; 
+    left: 0;
+    width: 300%; 
+    background-color: white; 
+    border: 1px solid #ccc; 
+    padding: 10px 0; 
+    z-index: 1; 
+    list-style-type: none; 
+    text-align: left; 
+    padding-left: 10px; 
+    color: gray; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 15px; 
+}
+
+.POSVENTA li ul li {
+    margin-bottom: 8px; 
+}
+
+.POSVENTA li ul li a {
+    display: block;
+    padding: 8px 15px; 
+    text-decoration: none; 
+    color: rgb(32, 32, 34);
+}
+
+.POSVENTA li ul li a:hover {
+    text-decoration: underline; 
+    background-color: rgb(238, 238, 238); 
+}
+
+.POSVENTA li:hover > ul {
+    display: block; 
+}
+
+/* OFERTAS *//* OFERTAS *//* OFERTAS *//* OFERTAS *//* OFERTAS *//* OFERTAS *//* OFERTAS *//* OFERTAS *//* OFERTAS *//* OFERTAS */
+.OFERTAS {
+    padding: 0;
+    margin: 0;
+    list-style-type: none; 
+    position: absolute; 
+    top: 40px; 
+    left: 540px; 
+}
+
+.OFERTAS > li {
+    position: relative; 
+}
+
+.OFERTAS > li > a {
+    background-color: transparent;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    color: gray; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 18px; 
+}
+
+.OFERTAS > li:hover > a {
+    background-color: rgb(238, 238, 238); 
+}
+
+.OFERTAS li ul {
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 300%; 
+    background-color: white; 
+    border: 1px solid #ccc; 
+    padding: 10px 0; 
+    z-index: 1; 
+    list-style-type: none; 
+    text-align: left; 
+    padding-left: 10px;
+    color: gray; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 15px; 
+}
+
+.OFERTAS li ul li {
+    margin-bottom: 8px;
+}
+
+.OFERTAS li ul li a {
+    display: block;
+    padding: 8px 15px; 
+    text-decoration: none; 
+    color: rgb(32, 32, 34); 
+}
+
+.OFERTAS li ul li a:hover {
+    text-decoration: underline; 
+    background-color: rgb(238, 238, 238); 
+}
+
+.OFERTAS li:hover > ul {
+    display: block; 
+}
+
+/* NOSOTROS *//* NOSOTROS *//* NOSOTROS *//* NOSOTROS *//* NOSOTROS *//* NOSOTROS *//* NOSOTROS *//* NOSOTROS *//* NOSOTROS */
+
+.NOSOTROS {
+    padding: 0;
+    margin: 0;
+    list-style-type: none; 
+    position: absolute; 
+    top: 40px; 
+    left: 670px; 
+}
+
+.NOSOTROS > li {
+    position: relative; 
+}
+
+.NOSOTROS > li > a {
+    background-color: transparent; 
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    color: gray; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 18px; 
+}
+
+.NOSOTROS > li:hover > a {
+    background-color: rgb(238, 238, 238); 
+}
+
+.NOSOTROS li ul {
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 200%; 
+    background-color: white; 
+    border: 1px solid #ccc; 
+    padding: 10px 0; 
+    z-index: 1; 
+    list-style-type: none; 
+    text-align: left; 
+    padding-left: 10px; 
+    color: gray; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 15px; 
+}
+
+.NOSOTROS li ul li {
+    margin-bottom: 8px; 
+}
+
+.NOSOTROS li ul li a {
+    display: block;
+    padding: 8px 15px; 
+    text-decoration: none; 
+    color: rgb(32, 32, 34); 
+}
+
+.NOSOTROS li ul li a:hover {
+    text-decoration: underline; 
+    background-color: rgb(238, 238, 238); 
+}
+
+.NOSOTROS li:hover > ul {
+    display: block; 
+}
+
+/* FINANCIAMIENTO*//* FINANCIAMIENTO*//* FINANCIAMIENTO*//* FINANCIAMIENTO*//* FINANCIAMIENTO*//* FINANCIAMIENTO*//* FINANCIAMIENTO*/
+
+
+.FINANCIAMIENTO {
+    padding: 0;
+    margin: 0;
+    list-style-type: none; 
+    position: absolute; 
+    top: 40px; 
+    left: 800px; 
+}
+
+.FINANCIAMIENTO > li {
+    position: relative;
+}
+
+.FINANCIAMIENTO > li > a {
+    background-color: transparent; 
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    color: gray; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 18px; 
+}
+
+.FINANCIAMIENTO > li:hover > a {
+    background-color: rgb(238, 238, 238); 
+}
+
+/*Serviciooooooooooooooooooooooooooooooooooooos*/
+
+.Servicios {
+    padding: 0;
+    margin: 0;
+    list-style-type: none; 
+    position: absolute; 
+    top: 40px; 
+    left: 980px; 
+}
+
+.Servicios > li {
+    position: relative; 
+}
+
+.Servicios > li > a {
+    background-color: transparent; 
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    color: gray; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 18px; 
+}
+
+.Servicios > li:hover > a {
+    background-color: rgb(238, 238, 238); 
+}
+
+.Servicios li ul {
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 200%; 
+    background-color: white; 
+    border: 1px solid #ccc; 
+    padding: 10px 0; 
+    z-index: 1; 
+    list-style-type: none; 
+    text-align: left; 
+    padding-left: 10px; 
+    color: gray; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 15px; 
+}
+
+.Servicios li ul li {
+    margin-bottom: 8px; 
+}
+
+.Servicios li ul li a {
+    display: block;
+    padding: 8px 15px; 
+    text-decoration: none; 
+    color: rgb(32, 32, 34); 
+}
+
+.Servicios li ul li a:hover {
+    text-decoration: underline; 
+    background-color: rgb(238, 238, 238); 
+}
+
+.Servicios li:hover > ul {
+    display: block; 
+}
+
+/*LOGOSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS*/
+
+.enlace-facebook img {
+    max-width: 42px; 
+    height: auto; 
+    transition: transform 0.3s ease;
+    position: absolute; 
+    top: 37px; 
+    left: 1545px; 
+}
+
+
+.enlace-facebook img:hover {
+    transform: scale(1.3); 
+}
+
+
+.enlace-instagram img {
+    max-width: 48px; 
+    height: auto; 
+    transition: transform 0.3s ease;
+    position: absolute; 
+    top: 33px;
+    left: 1650px; 
+}
+
+
+.enlace-instagram img:hover {
+    transform: scale(1.3); 
+}
+
+.enlace-youtube img {
+    max-width: 48px; 
+    height: auto; 
+    transition: transform 0.3s ease;
+    position: absolute; 
+    top: 40px; 
+    left: 1710px; 
+}
+
+.enlace-youtube img:hover {
+    transform: scale(1.3); 
+}
+
+.enlace-linkedin img {
+    max-width: 48px; 
+    height: auto; 
+    transition: transform 0.3s ease;
+    position: absolute; 
+    top: 33px; 
+    left: 1770px; 
+}
+
+.enlace-linkedin img:hover {
+    transform: scale(1.3); 
+}
+
+
+
+
+.enlace-whatsapp {
+    position: absolute;
+    display: inline-block;
+
+}
+
+.enlace-whatsapp img {
+    width: 45px;
+    height: auto; 
+    transition:transform 0.3s ease;
+    position: relative;
+    top: 35px; 
+    
+}
+
+.tooltip {
+    position: absolute;
+    top: calc(100% + 55px);
+    left: calc(100% + 1020px);
+    transform: translateX(-50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 300px; 
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left; 
+    visibility: hidden; 
+    opacity: 0; 
+    z-index: 100;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    max-height: 10000px; 
+}
+
+
+.enlace-whatsapp:hover .tooltip {
+    visibility: visible; 
+    opacity: 1; 
+
+}
+
+.enlace-whatsapp img:hover {
+    transform: scale(1.3); 
+}
+
+
+
+.enlace-InicioSesion {
+    
+    position: absolute; /* Puede ser relative, fixed, absolute, o sticky dependiendo de tus necesidades */
+    top: 21px; /* Ajusta esta medida según lo necesites */
+    left: 1820px; /* Ajusta esta medida según lo necesites */
+}
+.enlace-InicioSesion img {
+    width: 75px; /* Mantiene la proporción de la imagen */
+    height: 75px; /* Ajusta esta medida para agrandar la imagen */
+}
+
+
+
+.enlace-InicioSesion img:hover {
+    transform: scale(1.3); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body, body2 {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    position: relative; /* Asegura que el contenedor controle la posición de sus hijos */
+    width: 100%; /* Ajusta el ancho según tus necesidades */
+    height: 100%; /* Ajusta la altura según tus necesidades */
+}
+
+.contenedor img {
+    position: absolute; /* Permite posicionar la imagen de forma absoluta dentro del contenedor */
+    top: 77px; /* Ajusta la posición superior según tus necesidades */
+    left: 90px; /* Ajusta la posición izquierda según tus necesidades */
+    z-index: -1; /* Coloca la imagen detrás de todos los demás elementos */
+    width: 90%; /* Ajusta el ancho de la imagen para que cubra todo el contenedor */
+    height: 90%; /* Ajusta la altura de la imagen para que cubra todo el contenedor */
+    object-fit: cover; /* Ajusta el tamaño de la imagen para cubrir completamente su contenedor */
+}
+
+
+
+
+
+
+
+
+
+
+.contenedor2 {
+    position: relative; /* Asegura que el contenedor controle la posición de sus hijos */
+    max-width: 400px; /* Ancho máximo del contenedor */
+    height: 450px;
+    margin: 20px auto; /* Centrado horizontal del contenedor */
+    background-color: #ece9d9; /* Color de fondo del contenedor */
+    margin-top: -700px; /* Espacio desde arriba */
+
+    box-shadow: 0 0 20px #b49f23; /* Sombra para el contenedor */
+    text-align: center; /* Centra el contenido dentro del contenedor */
+    z-index: 2; /* Asegura que el contenedor esté por encima de otros elementos */
+}
+
+.titulo {
+    font-size: 30px; /* Tamaño del título */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    padding-top: 20px;
+    color: #b49f23;
+    font-weight: bold;
+
+
+}
+
+.boton-pdf {
+    display: inline-block; /* Hace que el botón se comporte como un bloque en línea */
+    padding: 10px 20px; /* Espaciado dentro del botón */
+    background-color: #b49f23;
+    color: #fff; /* Color del texto del botón */
+    text-decoration: none; /* Quita cualquier subrayado del texto */
+    border: none; /* Quita el borde del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+    margin-top: 10px;
+    font-size: 25px; /* Tamaño del título */
+
+}
+
+.boton-pdf:hover {
+    background-color: #c9b22f;
+}
+
+.imagen-pdf {
+    width: 130px;
+    height: auto;
+    margin-top: 70px;
+    margin-right: 180px;
+    cursor: pointer; /* CambiCambia el cursor al pasar sobre la imagen */
+}
+
+
+.descarga-imagen {
+    width: 100px;
+    height: auto;
+    margin-top: -120px;
+    margin-left: 150px;
+    cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+}
+
+
+
+.ver {
+    font-size: 30px; /* Tamaño del título */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    margin-top: -5px;
+    margin-left: -170px;
+    font-weight: bold;
+    color: #b49f23;
+
+
+}
+
+.descargar {
+    font-size: 30px; /* Tamaño del título */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    margin-top: -62px;
+    margin-right: -160px;
+    font-weight: bold;
+    color: #b49f23;
+
+}

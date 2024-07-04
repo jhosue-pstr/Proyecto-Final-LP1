@@ -402,17 +402,17 @@ header {
 /*LOGOSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS*/
 
 .enlace-facebook img {
-    max-width: 40px; 
+    max-width: 42px; 
     height: auto; 
     transition: transform 0.3s ease;
     position: absolute; 
-    top: 40px; 
-    left: 1550px; 
+    top: 37px; 
+    left: 1545px; 
 }
 
 
 .enlace-facebook img:hover {
-    transform: scale(1.1); 
+    transform: scale(1.3); 
 }
 
 
@@ -421,13 +421,13 @@ header {
     height: auto; 
     transition: transform 0.3s ease;
     position: absolute; 
-    top: 35px;
+    top: 33px;
     left: 1650px; 
 }
 
 
 .enlace-instagram img:hover {
-    transform: scale(1.1); 
+    transform: scale(1.3); 
 }
 
 .enlace-youtube img {
@@ -435,12 +435,12 @@ header {
     height: auto; 
     transition: transform 0.3s ease;
     position: absolute; 
-    top: 43px; 
+    top: 40px; 
     left: 1710px; 
 }
 
 .enlace-youtube img:hover {
-    transform: scale(1.1); 
+    transform: scale(1.3); 
 }
 
 .enlace-linkedin img {
@@ -448,19 +448,19 @@ header {
     height: auto; 
     transition: transform 0.3s ease;
     position: absolute; 
-    top: 35px; 
+    top: 33px; 
     left: 1770px; 
 }
 
 .enlace-linkedin img:hover {
-    transform: scale(1.1); 
+    transform: scale(1.3); 
 }
 
 
 
 
 .enlace-whatsapp {
-    position: relative;
+    position: absolute;
     display: inline-block;
 
 }
@@ -468,16 +468,16 @@ header {
 .enlace-whatsapp img {
     width: 45px;
     height: auto; 
-    transition: transform 0.3s ease;
-    position: relative; 
-    top: -30px; 
-    left: 920px;
+    transition:transform 0.3s ease;
+    position: relative;
+    top: 35px; 
+    
 }
 
 .tooltip {
     position: absolute;
-    top: calc(100% + 10px);
-    left: 50%; 
+    top: calc(100% + 55px);
+    left: calc(100% + 1020px);
     transform: translateX(-50%);
     background-color: white;
     border: 1px solid #ccc;
@@ -498,16 +498,91 @@ header {
 .enlace-whatsapp:hover .tooltip {
     visibility: visible; 
     opacity: 1; 
+
+}
+
+.enlace-whatsapp img:hover {
+    transform: scale(1.3); 
 }
 
 
-.enlace-InicioSesion{
+
+
+
+
+
+
+
+
+
+
+
+
+.enlace-InicioSesion {
     
-    height: auto; 
-    position: relative;
-    left: 1210px;
-    bottom: 30px;
+    position: absolute; /* Puede ser relative, fixed, absolute, o sticky dependiendo de tus necesidades */
+    top: 21px; /* Ajusta esta medida según lo necesites */
+    left: 1820px; /* Ajusta esta medida según lo necesites */
 }
+.enlace-InicioSesion img {
+    width: 75px; /* Mantiene la proporción de la imagen */
+    height: 75px; /* Ajusta esta medida para agrandar la imagen */
+}
+
+
+
+.enlace-InicioSesion img:hover {
+    transform: scale(1.3); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*PANEEELLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL*/
@@ -809,3 +884,7 @@ body5 img:hover {
     font-size: 18px; 
     color: #333; 
 }
+
+
+
+
